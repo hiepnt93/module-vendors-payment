@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Vnecoms\Vendors\Helper\Data">
+        <arguments>
+            <argument name="blocksUseTemplateFromAdminhtml" xsi:type="array">
+                <item name="Magento\Tax\Block\Adminhtml\Items\Price\Renderer" xsi:type="string">Magento\Tax\Block\Adminhtml\Items\Price\Renderer</item>
+                <item name="Magento\Sales\Block\Adminhtml\Order\View\Giftmessage" xsi:type="string">Magento\Sales\Block\Adminhtml\Order\View\Giftmessage</item>
+                <item name="Magento\Sales\Block\Adminhtml\Order\Payment" xsi:type="string">Magento\Sales\Block\Adminhtml\Order\Payment</item>
+                <item name="Magento\Sales\Block\Adminhtml\Order\Totals\Tax" xsi:type="string">Magento\Sales\Block\Adminhtml\Order\Totals\Tax</item>
+                
+                <item name="Magento\Sales\Block\Adminhtml\Items\Renderer\DefaultRenderer" xsi:type="string">Magento\Sales\Block\Adminhtml\Items\Renderer\DefaultRenderer</item>
+                <item name="Magento\Sales\Block\Adminhtml\Order\Totalbar" xsi:type="string">Magento\Sales\Block\Adminhtml\Order\Totalbar</item>
+                
+                <item name="Magento\Shipping\Block\Adminhtml\Order\Packaging" xsi:type="string">Magento\Shipping\Block\Adminhtml\Order\Packaging</item>
+                <item name="Magento\Shipping\Block\Adminhtml\View\Form" xsi:type="string">Magento\Shipping\Block\Adminhtml\View\Form</item>
+                <item name="Magento\Sales\Block\Adminhtml\Order\Comments\View" xsi:type="string">Magento\Sales\Block\Adminhtml\Order\Comments\View</item>
+                <item name="Magento\Shipping\Block\Adminhtml\Order\Tracking\View" xsi:type="string">Magento\Shipping\Block\Adminhtml\Order\Tracking\View</item>
+                
+            </argument>
+        </arguments>
+    </type> 
+</config>

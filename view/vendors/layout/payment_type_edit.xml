@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="vendor-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Vnecoms_VendorsCms::css/block_form.css"/>
+        <css src="jquery/jstree/themes/default/style.css"/>
+    </head>
+    <update handle="styles"/>
+    <update handle="editor"/>
+    <body>
+        <referenceBlock name="head.components">
+            <block class="Magento\Framework\View\Element\Js\Components" name="vendors_cms_head_components" template="Vnecoms_VendorsCms::js/components.phtml"/>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Vnecoms\VendorsCms\Block\Vendors\Block\Edit" name="block_form_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Vnecoms\VendorsCms\Block\Vendors\Block\Tabs" name="vendor_block_edit_tabs">
+                <block class="Vnecoms\VendorsCms\Block\Vendors\Block\Tab\Main" name="cms_block_edit_tab_main"/>
+
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">cms_block_edit_tab_main</argument>
+                </action>
+
+            </block>
+        </referenceContainer>
+        <referenceContainer name="js">
+            <!--<block class="Magento\Framework\View\Element\Template" template="Vnecoms_VendorsCms::wysiwyg/js.phtml" name="catalog.wysiwyg.js"/>-->
+            <block class="Magento\Framework\View\Element\Template" template="Vnecoms_VendorsCms::wysiwyg/extrajs.phtml" name="vendorscms.wysiwyg.extrajs"/>
+        </referenceContainer>
+    </body>
+</page>
