@@ -7,6 +7,6 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Vnecoms_VendorsPayment:etc/menu.xsd">
     <menu>    	
-    	<add id="Vnecoms_VendorsPayment::main" icon="fa fa-cart-plus" title="Sales" module="Vnecoms_VendorsSales" sortOrder="20" resource="Vnecoms_VendorsPayment::sales" dependsOnModule="Vnecoms_VendorsSales" />
+    	<add id="Vnecoms_VendorsPayment::main" icon="fa fa-cart-plus" title="Payments" module="Vnecoms_VendorsPayment" sortOrder="20" resource="Vnecoms_VendorsPayment::main" dependsOnModule="Vnecoms_VendorsPayment" />
     </menu>
 </config>
